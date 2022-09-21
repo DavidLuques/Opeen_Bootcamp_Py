@@ -1,0 +1,2 @@
+class estatica:
+    nombre =
