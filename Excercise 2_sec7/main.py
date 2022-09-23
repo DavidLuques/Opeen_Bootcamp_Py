@@ -1,14 +1,22 @@
 import time
 
-print(' ingrese hora')
-hora=int(input())
-print('ingrese minutos')
-minutos=(input())
 
-if hora>7:
-    print("son mas de las 7 AM !! ")
+print('quieres saber si es hora de volver a casa?  escribe: si')
+resp=input()
+if(resp=='si'):
+    localTime = time.localtime()
+    hora=localTime.tm_hour
+    minuto=localTime.tm_min
 
-localTime=time.localtime()
-print("result:", localTime)
-print("\nyear:", localTime.tm_hour)
-print("tm_hour:", localTime.tm_mon)
+
+    if(hora>19):
+        print('tiempo de volver a casa!')
+    else:
+        horaFaltante=18-hora
+        minutoFaltante=60-minuto
+
+        print(f'faltan {horaFaltante} Horas y {minutoFaltante} minutos')
+        print('lo siento =C')
+
+
+
